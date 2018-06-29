@@ -1,0 +1,33 @@
+{{include('header.twig')}}
+    <main>
+
+        <form class="generic-form" action="" method="GET">
+            <fieldset>
+                <legend>Recherche de clients</legend>
+                <ul>
+                    <li>
+                        <label for="country">Pays :</label>
+                        <input id="country" name="country" type="text">
+                    </li>
+                    <li>
+                        <button class="button button-primary" type="submit">Rechercher</button>
+                    </li>
+                </ul>
+            </fieldset>
+        </form>
+        <ul>
+            {% for value in customersList %}
+                 <li>{{ value.customerName }}</li>
+            {% endfor %}
+        </ul>
+    </main>
+
+    
+        <footer>
+        <ul class="link-list">
+            <li><a class="button button-primary" href="/dev/silex/web/index.php/">Accueil</a></li>
+        </ul>
+    </footer>
+
+    </body>
+</html>
